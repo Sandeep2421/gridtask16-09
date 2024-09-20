@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: brown;
+        height: 150vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .main1 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        /* border: 2px solid black; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 25px;
+      }
+      .q1 {
+        background-color: brown;
+        border: 1px solid black;
+      }
+      .q2 {
+        background-color: orange;
+      }
+      .q3 {
+        background-color: yellowgreen;
+      }
+      .q4 {
+        background-color: blue;
+      }
+      .q5 {
+        background-color: green;
+      }
+      .q6 {
+        background-color: greenyellow;
+      }
+      .main2 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        padding: 25px;
+      }
+      .w1 {
+        background-color: red;
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+
+      .w2 {
+        background-color: rgb(204, 186, 186);
+        grid-row: 1/4;
+        grid-column: 3;
+      }
+      .w3 {
+        background-color: rgb(184, 166, 166);
+      }
+      .w4 {
+        background-color: rgb(46, 20, 20);
+      }
+
+      .main3 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 25px;
+      }
+
+      .e1 {
+        background-color: rgb(223, 203, 203);
+        grid-column: 1/4;
+      }
+      .e2 {
+        background-color: rgb(219, 18, 18);
+      }
+      .e3 {
+        background-color: rgb(190, 99, 99);
+        grid-column: 2/4;
+      }
+      .e4 {
+        background-color: rgb(156, 143, 143);
+        grid-column: 1/4;
+      }
+      .main4 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 10px;
+        padding: 25px;
+      }
+      .r1 {
+        background-color: rgb(219, 18, 18);
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      .r2 {
+        background-color: rgb(79, 99, 156);
+        grid-column: 3/5;
+        grid-row: 1/3;
+      }
+      .r3 {
+        background-color: rgb(149, 88, 136);
+        grid-row: 3;
+      }
+      .r4 {
+        background-color: rgb(219, 18, 125);
+        grid-column: 2/5;
+      }
+      .r5 {
+        background-color: rgb(164, 143, 143);
+        grid-column: 1/5;
+      }
+      .main5 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        padding: 25px;
+        gap: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      .t1 {
+        background-color: rgb(219, 18, 18);
+      }
+      .t2 {
+        background-color: rgb(93, 49, 49);
+      }
+      .t3 {
+        background-color: rgb(49, 6, 6);
+      }
+      .t4 {
+        background-color: rgb(18, 41, 219);
+      }
+      .t5 {
+        background-color: rgb(67, 5, 5);
+      }
+      .t6 {
+        background-color: rgb(211, 194, 194);
+      }
+      .t7 {
+        background-color: rgb(18, 219, 65);
+      }
+      .t8 {
+        background-color: rgb(235, 209, 209);
+      }
+      .t9 {
+        background-color: rgb(196, 134, 134);
+      }
+      .t10 {
+        background-color: rgb(119, 119, 108);
+      }
+      .t11 {
+        background-color: rgb(177, 178, 159);
+      }
+      .t12 {
+        background-color: rgb(127, 156, 78);
+      }
+      .t13 {
+        background-color: rgb(190, 156, 156);
+      }
+      .t14 {
+        background-color: rgb(18, 182, 219);
+      }
+      .t15 {
+        background-color: rgb(209, 18, 219);
+      }
+      .t16 {
+        background-color: rgb(216, 159, 159);
+      }
+      .t17 {
+        background-color: rgb(162, 18, 219);
+      }
+      .t18 {
+        background-color: rgb(149, 140, 140);
+      }
+      .main6 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        padding: 25px;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      }
+      .y1 {
+        background-color: rgb(194, 46, 46);
+        grid-column: 1/3;
+      }
+      .y2 {
+        background-color: rgb(29, 153, 75);
+      }
+      .y3 {
+        background-color: rgb(138, 183, 48);
+      }
+      .y4 {
+        background-color: rgb(197, 131, 54);
+      }
+      .y5 {
+        background-color: rgb(74, 177, 59);
+        grid-column: 1/3;
+        grid-row: 3/5;
+      }
+      .y6 {
+        background-color: rgb(20, 84, 16);
+      }
+      .y7 {
+        background-color: rgb(102, 9, 9);
+      }
+      .y8 {
+        background-color: rgb(215, 83, 83);
+      }
+      .y9 {
+        background-color: rgb(221, 16, 16);
+      }
+      .y10 {
+        background-color: rgb(191, 171, 171);
+      }
+      .y11 {
+        background-color: rgb(15, 14, 14);
+      }
+      .y12 {
+        background-color: rgb(173, 65, 65);
+      }
+      .y13 {
+        background-color: rgb(232, 212, 212);
+        grid-column: 1/4;
+      }
+      .y14 {
+        background-color: rgb(149, 140, 140);
+      }
+      .main7 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        padding: 25px;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      .u1 {
+        background-color: rgb(178, 208, 176);
+        grid-column: 1/3;
+      }
+      .u2 {
+        background-color: rgb(24, 16, 84);
+        grid-column: 3/5;
+      }
+      .u3 {
+        background-color: rgb(188, 105, 33);
+        grid-column: 1/3;
+        grid-row: 2/4;
+      }
+      .u4 {
+        background-color: rgb(20, 84, 16);
+        grid-column: 3/5;
+      }
+      .u5 {
+        background-color: rgb(196, 210, 195);
+      }
+      .u6 {
+        background-color: rgb(49, 209, 38);
+      }
+      .main8 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        padding: 25px;
+        gap: 10px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      .i1 {
+        background-color: rgb(215, 228, 215);
+      }
+      .i2 {
+        background-color: rgb(38, 84, 209);
+      }
+      .i3 {
+        background-color: rgb(177, 115, 67);
+      }
+      .i4 {
+        background-color: rgb(72, 83, 71);
+      }
+      .i5 {
+        background-color: rgb(209, 38, 129);
+      }
+      .i6 {
+        background-color: rgb(38, 152, 209);
+      }
+      .i7 {
+        background-color: rgb(226, 232, 226);
+      }
+      .i8 {
+        background-color: rgb(108, 174, 104);
+        grid-column: 3/6;
+      }
+      .i9 {
+        background-color: rgb(49, 209, 38);
+        grid-column: 1/6;
+      }
+      .main9 {
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        border: 2px solid black;
+        display: grid;
+        padding: 25px;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      .o1 {
+        background-color: rgb(22, 148, 22);
+        grid-column: 1/4;
+      }.o2 {
+        background-color: rgb(23, 14, 154);
+        grid-row: 2/4;
+      }.o3 {
+        background-color: rgb(214, 117, 27);
+        grid-column: 2/4;
+      }.o4 {
+        background-color: rgb(185, 36, 155);
+      }.o5 {
+        background-color: rgb(226, 232, 226);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main1">
+        <div class="q1"></div>
+        <div class="q2"></div>
+        <div class="q3"></div>
+        <div class="q4"></div>
+        <div class="q5"></div>
+        <div class="q6"></div>
+      </div>
+
+      <div class="main2">
+        <div class="w1"></div>
+        <div class="w2"></div>
+        <div class="w3"></div>
+        <div class="w4"></div>
+        <div class="w5"></div>
+        <div class="w6"></div>
+      </div>
+
+      <div class="main3">
+        <div class="e1"></div>
+        <div class="e2"></div>
+        <div class="e3"></div>
+        <div class="e4"></div>
+      </div>
+
+      <div class="main4">
+        <div class="r1"></div>
+        <div class="r2"></div>
+        <div class="r3"></div>
+        <div class="r4"></div>
+        <div class="r5"></div>
+      </div>
+
+      <div class="main5">
+        <div class="t1"></div>
+        <div class="t2"></div>
+        <div class="t3"></div>
+        <div class="t4"></div>
+        <div class="t5"></div>
+        <div class="t6"></div>
+        <div class="t7"></div>
+        <div class="t8"></div>
+        <div class="t9"></div>
+        <div class="t10"></div>
+        <div class="t11"></div>
+        <div class="t12"></div>
+        <div class="t13"></div>
+        <div class="t14"></div>
+        <div class="t15"></div>
+        <div class="t16"></div>
+        <div class="t17"></div>
+        <div class="t18"></div>
+      </div>
+
+      <div class="main6">
+        <div class="y1"></div>
+        <div class="y2"></div>
+        <div class="y3"></div>
+        <div class="y4"></div>
+        <div class="y5"></div>
+        <div class="y6"></div>
+        <div class="y7"></div>
+        <div class="y8"></div>
+        <div class="y9"></div>
+        <div class="y10"></div>
+        <div class="y11"></div>
+        <div class="y12"></div>
+        <div class="y13"></div>
+        <div class="y14"></div>
+      </div>
+
+      <div class="main7">
+        <div class="u1"></div>
+        <div class="u2"></div>
+        <div class="u3"></div>
+        <div class="u4"></div>
+        <div class="u5"></div>
+        <div class="u6"></div>
+      </div>
+      <div class="main8">
+        <div class="i1"></div>
+        <div class="i2"></div>
+        <div class="i3"></div>
+        <div class="i4"></div>
+        <div class="i5"></div>
+        <div class="i6"></div>
+        <div class="i7"></div>
+        <div class="i8"></div>
+        <div class="i9"></div>
+      </div>
+      <div class="main9">
+        <div class="o1"></div>
+        <div class="o2"></div>
+        <div class="o3"></div>
+        <div class="o4"></div>
+        <div class="o5"></div>
+      </div>
+    </div>
+  </body>
+</html>
